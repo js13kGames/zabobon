@@ -1,0 +1,20 @@
+{
+  "name": "playground",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "prepack": "rm -rf dist",
+    "pack": "js13k-packer index.html dist --minify \"{\\\"collapseBooleanAttributes\\\":true}\"",
+    "duplicates": "npx jscpd -t --pattern \"main.js\" -l 1 -x 5000 -z 100kb -r html"
+  },
+  "dependencies": {
+    "js13k-packer": "^1.0.2"
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}

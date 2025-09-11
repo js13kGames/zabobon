@@ -1,0 +1,39 @@
+<!doctype html>
+<meta charset="utf-8" />
+<title>Zabobon - JS13K Game - 2025</title>
+<link rel="stylesheet" href="main.css">
+
+<!-- Start screen overlay (solid black) -->
+<div id="start" class="overlay">
+  <div id="startEyes" class="eyes eyes--lg">
+    <i class="eye"><b></b></i>
+    <i class="eye"><b></b></i>
+  </div>
+  <button id="play" class="btn">Play</button>
+  <!-- Optional subtitle or credits could go here -->
+  <!-- <small class="credits">Zabobon – JS13K 2025</small> -->
+</div>
+
+<!-- HUD: avatar in top-left, reusing the same eye component -->
+<div id="avatar">
+  <div class="head">
+    <i class="ear left"></i>
+    <i class="ear right"></i>
+    <div id="avatarEyes" class="eyes eyes--sm">
+      <i class="eye"><b></b></i>
+      <i class="eye"><b></b></i>
+    </div>
+    <div id="avatarCross" class="cross" aria-hidden="true">
+      <span>x</span><span>x</span>
+    </div>
+    <div id="avatarTip" class="avatar-tip" style="display:none"></div>
+  </div>
+  <div id="hearts"></div>
+  <!-- Hearts live next to avatar; kept here so layout is consistent -->
+  <!-- Game time will be appended via JS as spans, same as before -->
+  
+  <!-- The main canvas sits behind the HUD; moved outside overlay for clarity -->
+</div>
+
+<canvas id="gl"></canvas>
+<script src="main.js" type="module"></script>
